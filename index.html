@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>JFast Food Store</title>
+   <link rel="stylesheet" type="text/css" href="9.css">
+</head>
+
+<body background="6.jpeg">
+   <center><h1><I>YUMMY DELIGHTS</h1></center>
+   <div class="container">
+      <div class="juice-types">
+         <div class="juice-card">
+            <center><h3>PIZZA</h3></center>
+            <center><img src=3.jpeg width=90 height=90></center>
+            <center><button onclick="displayJuiceDetails('PIZZA')">Add to Cart</button></center>
+         </div>
+         <div class="juice-card">
+            <h3>CHICKEN FRIES</h3>
+            <center><img src=4.jpeg width=150 height=90></center>
+            <button onclick="displayJuiceDetails('CHICKEN FRIES')">Add to Cart</button>
+         </div>
+         <div class="juice-card">
+            <h3>FRENCH FRIES</h3>
+            <center><img src=6.jpeg width=150 height=90></center>
+            <button onclick="displayJuiceDetails('FRENCH FRIES')">Add to Cart</button>
+         </div>
+      </div>
+   </div>
+        <h1><p><center><B><I>
+   
+   <div id="juiceDetailsContainer" class="juice-details-container" style="display: none;">
+      <h3 id="juiceType"></h3>
+      <p>Offer price: RS-150/-</p>
+      <button onclick="displayPurchase()">Purchase</button>
+   </div>
+
+    <div id="purchaseContainer" class="purchase-container" style="display: none;">
+      <h3>Purchase</h3>
+      <p>Customer Name: <input type="text" id="customerName"></p>
+      <p>Food item: <span id="juiceTypePurchase"></span></p>
+      <button onclick="displayPayment()">Make Payment</button>
+
+   </div>
+
+   <div id="paymentContainer" class="payment-container" style="display: none;">
+      <h3>Payment</h3>
+      <p>Food item: <span id="juiceTypePayment"></span></p>
+      <p>Customer: <span id="customerDetails"></span></p>
+      <p>Price: <span id="price"></span></p>
+      <h4>Enter Card Details:</h4>
+      <input type="text" placeholder="Card Number">
+      <input type="text" placeholder="CVV">
+      <button onclick="returnHome()">Pay</button>
+   </div>
+
+   <div id="homeContainer" class="home-container" style="display: none;">
+      <p><h2>Thank you for your purchase! Enjoy your food!<h2></p> 
+   </div>
+
+   <script src="9.js"></script>
+</body>
+
+</html>
